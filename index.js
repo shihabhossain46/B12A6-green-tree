@@ -129,7 +129,7 @@ const displayCart = () => {
 
     div.innerHTML = `
       <span class="font-semibold">${item.name}</span>
-      <span class="text-green-300">$${item.price}</span>
+      <span class="text-black">$${item.price}</span>
       <button onclick="removeFromCart(${index})" class="text-red-600 font-bold">X</button>
     `;
     cartContainer.appendChild(div);
