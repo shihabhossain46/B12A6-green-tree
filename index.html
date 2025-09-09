@@ -20,7 +20,7 @@
           <li class="text-white">Gallery</li>
           <li class="text-white">Plant a Tree</li>
         </ul>
-        <p class="bg-yellow-400 px-4 rounded-3xl ">Plant a Tree</p>
+        <p class="bg-yellow-400 px-4 rounded-3xl">Plant a Tree</p>
       </nav>
 
       <!-- banner section -->
@@ -40,6 +40,7 @@
     <main class="w-11/12 mx-auto">
       <p class="text-center text-4xl mt-5 font-semibold">Choose Your Trees</p>
       <p class="text-xl font-semibold ml-5">Categories</p>
+      <p class="text-xl font-semibold ml-5">Your Cart</p>
 
       <section class="grid grid-cols-12 p-7">
         <div class="left-side grid col-span-2 h-110" id="level-container"></div>
@@ -47,16 +48,19 @@
           class="middle-side grid grid-cols-3 col-span-8 gap-5"
           id="card-container"
         ></div>
-        <div id="cart-container" class="right-side  ml-2 p-2 grid col-span-2 h-20 space-y-2 "><p>your card</p></div>
+        <div
+          id="cart-container"
+          class="right-side ml-2 p-2 grid col-span-2 h-20 space-y-2"
+        >
+          <p></p>
+        </div>
       </section>
       <!-- modal -->
       <!-- Open the modal using ID.showModal() method -->
       <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
       <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
-          <div id="details-container" class="">
-            
-          </div>
+          <div id="details-container" class=""></div>
           <div class="modal-action">
             <form method="dialog">
               <!-- if there is a button in form, it will close the modal -->
@@ -66,25 +70,76 @@
         </div>
       </dialog>
 
-      <section class="h-50 w-11/12 mx-auto">
-        <h1 class="text-center mt-2 text-4xl font-bold mb-5">About the Campaign</h1>
+      <section class="w-11/12 mx-auto">
+        <h1 class="text-center mt-2 text-4xl font-bold mb-5">
+          About the Campaign
+        </h1>
         <div class="flex justify-center items-center space-y-5">
-          <img class="" src="./assets/about.png" alt="">
-          <div><p class="ml-5 font-semibold">Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
+          <img class="" src="./assets/about.png" alt="" />
+          <div>
+            <p class="ml-5 font-semibold">
+              Green Earth is a global tree plantation initiative dedicated to
+              fighting climate change. Since our start, we’ve planted over
+              500,000 trees worldwide. By joining our campaign, you help restore
+              forests, create habitats for wildlife, and combat global warming.
+            </p>
 
             <ul class="text-2xl mt-5 ml-3 font-semibold">
               <li>. Restoration of natural habitats</li>
               <li>. Improvement of air quality</li>
               <li>. Support for local communities</li>
             </ul>
-          
-          
           </div>
-          </div>
+        </div>
+      </section>
 
+      <section class="h-100 w-full bg-green-200 p-10 space-y-10">
+        <p class="text-4xl font-bold text-center">Our Impact</p>
+        <div class="container flex justify-between">
+          <div class="box-container bg-white p-6 rounded-md">
+            <p class="text-5xl text-green-500 font-semibold">500K+</p>
+            <p class="text-xl font-semibold">Trees Planted</p>
+          </div>
+          <div class="box-container bg-white p-6 rounded-md">
+            <p class="text-5xl text-green-500 font-semibold">120+</p>
+            <p class="text-xl font-semibold">Communities Involved</p>
+          </div>
+          <div class="box-container bg-white p-6 rounded-md">
+            <p class="text-5xl text-green-500 font-semibold">30+</p>
+            <p class="text-xl font-semibold">Countries Reached</p>
+          </div>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section
+        class="h-120 mt-10 bg-green-600 flex justify-center items-center"
+      >
+        <div class="form-container h-80 w-100 bg-green-700 flex flex-col p-5 space-y-10">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="input input-secondary w-full"
+          />
+          <input
+            type="text"
+            placeholder="Your Email Address"
+            class="input input-accent w-full"
+          />
+          <select class="select select-success w-full">
+            <option disabled selected>Number of Trees</option>
+            <option>10</option>
+            <option>06</option>
+            <option>08</option>
+          </select>
+          <button class="btn btn-primary w-full ">Primary</button>
+        </div>
+      </section>
+      <section class="w-full h-20 bg-green-800">
+        <p class="text-center text-white p-8">© 2025 Green Earth. All Rights Reserved.</p>
+
+      </section>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>

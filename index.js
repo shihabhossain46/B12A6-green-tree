@@ -1,4 +1,4 @@
-let allPlants = []; // গ্লোবাল ভ্যারিয়েবল
+let allPlants = []; 
 
 const loadAllPlants = () => {
   fetch("https://openapi.programming-hero.com/api/plants")
@@ -33,7 +33,7 @@ const displayPlants = (plants) => {
   });
 };
 
-// বাটন লোড করা
+
 const loadLessons = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
     .then((res) => res.json())
@@ -57,16 +57,16 @@ const displayLessons = (lessons) => {
   });
 };
 
-// ক্যাটাগরি ফিল্টার
+
 const filterByCategory = (categoryName) => {
-  if (!allPlants.length) return; // সেফগার্ড
+  if (!allPlants.length) return; 
 
   const filtered = allPlants.filter((plant) => plant.category === categoryName);
 
   displayPlants(filtered);
 };
 
-// প্রথমে সব লোড হবে
+
 
 const loadWordData = async (id) => {
   const url = `https://openapi.programming-hero.com/api/plant/${id}`;
@@ -77,7 +77,7 @@ const loadWordData = async (id) => {
 };
 
 const displayWordDetails = (plant) => {
-  // console.log(plant);
+  
   const detailBox = document.getElementById("details-container");
   detailBox.innerHTML = `<div class="space-y-5">
               <img src="${plant.image}" alt="" class="w-full h-70">
@@ -89,30 +89,30 @@ const displayWordDetails = (plant) => {
   document.getElementById("my_modal_5").showModal();
 };
 
-let cart = []; // কার্টের লিস্ট রাখার জন্য
+let cart = []; 
 
-// কার্টে আইটেম যোগ করার ফাংশন
+
 const loadLevelCard = (id) => {
-  // কারেন্ট প্ল্যান্ট খুঁজে বের করবো
+  
   const plant = allPlants.find((p) => p.id === id);
   if (!plant) return;
 
-  // কার্টে পুশ করা
+  
   cart.push(plant);
 
-  // UI তে শো করা
+  
   displayCart();
 };
 
-// কার্ট দেখানোর ফাংশন
+
 const displayCart = () => {
   const cartContainer = document.getElementById("cart-container");
   cartContainer.innerHTML = "";
 
-  let total = 0; // মোট প্রাইস ট্র্যাক করার জন্য
+  let total = 0; 
 
   cart.forEach((item, index) => {
-    total += Number(item.price); // প্রতিবার যোগ হবে
+    total += Number(item.price); 
 
     const div = document.createElement("div");
     div.classList.add(
@@ -135,7 +135,7 @@ const displayCart = () => {
     cartContainer.appendChild(div);
   });
 
-  // মোট প্রাইস দেখানো
+  
   if (cart.length > 0) {
     const totalDiv = document.createElement("div");
     totalDiv.classList.add(
@@ -155,9 +155,9 @@ const displayCart = () => {
   }
 };
 
-// কার্ট থেকে রিমুভ করার ফাংশন
+
 const removeFromCart = (index) => {
-  cart.splice(index, 1); // আইটেম বাদ
+  cart.splice(index, 1);
   displayCart();
 };
 
